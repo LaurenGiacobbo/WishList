@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <title>My WishList App:REGISTER</title>
+  <link rel="stylesheet" href="../assets/wishStyles.css">    
+  </head>
+
+  <body ng-controller="RegisterCtrl'">
+    <div id="myWishList">
+      <div class="tint">
+          <main>
+            <section class="topArea">
+            </section>
+            <section class="middleArea">
+              <div id="homeLogo">
+                <div id="logo"></div>
+              </div>
+              <div id="homeText">
+                <div id="text">a collective place for all of your wish lists</div>
+              </div>
+               <div id="form">
+                 <form class="form-signin" name="regForm">
+                    <div class="form-group" ng-class="{ 'has-error' : regForm.email.$invalid }">
+                      <input type="email" name="email" placeholder="email" class="form-control" ng-model="user.email">
+                      <p class="help-block" ng-show="regForm.email.$invalid">Enter a valid email.</p>
+                    </div>
+                    <div class="form-group" ng-class="{ 'has-error' : regForm.username.$invalid }">
+                      <input type="name" name="name" placeholder="username" class="form-control" ng-model="user.username">
+                      <p class="help-block" ng-show="regForm.username.$invalid">Enter a username.</p>
+                    </div> 
+                    <div class="form-group" ng-class="{ 'has-error' : regForm.password.$invalid }">
+                      <input type="password" name="password" placeholder="password" class="form-control" ng-model="user.password" ng-minlength="8">
+                      <p class="help-block" ng-show="regForm.password.$error.minlength">Min password length is 8 characters.</p>
+                      <p style="color:red;" ng-show="regError">{{regErrorMessage}}</p>
+                    </div>  
+
+                     <div class="newUserButton">
+                      <div class='clickTrack'><label ng-click="signUp();" ng-disabled="!user.email || !user.password">Register</label>
+                      </label></div></div>
+                  </form>
+                </div>
+            </section>
+            <section class="bottomArea">
+             
+            </section>
+          </main>
+        </div>
+      </div>
+  </body>
+
+</html>

@@ -1,0 +1,119 @@
+<!DOCTYPE HTML>
+<html ng-app="myWishListsApp">
+  <head>
+  	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.0.7/angular.min.js"></script>
+    <script type="text/javascript" src="assets/wishStyles.js"></script>
+    <link href='https://fonts.googleapis.com/css?family=Droid+Serif:700italic,400italic,400' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text-/css" href="assets/wishStyles.css">
+  </head>
+  <body>
+    <div id="myWishList" ng-controller="myListsController">
+    	<div class="tint">
+
+    		<main>
+	    		<section class="topArea"> 
+	    			<div id="ScreenText">
+	    		    	<div id="textTitle">Select your wish list category</div>
+	    		    </div>
+	    		</section>
+
+	    		<section class="middleArea">
+	    		    <div id="homeLogo">
+	    		    	<div id="logo"></div>
+	    		    </div>
+	    		    <div id="homeText">
+	    		    	<div id="text">a collective place for all of your wish lists</div>
+	    		    </div>
+	    		    <div id='categoryChoicesScreen'>
+	    		    	<div class="cat">apparel</div>
+	    		    	<div class="cat">for the home</div>
+	    		    	<div class="cat">books</div>
+	    		    	<div class="cat">for your pet</div>	    	
+	    		    	<div class="cat">sports</div>
+	    		    	<div class="cat">accessories</div>
+	    		    	<div class="cat">games</div>
+	    		    	<div class="cat">music</div>	
+	    		    </div>
+	    		    <div id='addItemsScreen'>
+	    		    	<div class="listName">list: for the home</div>
+	    		    	<div class="addItem">add your item</div>
+	    		    	<div class="itemButtons">
+	    		    		<div class="itemDetail">details</div>
+	    		    		<div class="itemDetail">link</div>
+	    		    		<div class="itemDetail">notes</div>
+	    		    		<div class="itemDetail">price</div>		
+	    		    	</div>
+	    		    	<div id='entryArea'>
+	    		    		<div class="entryDetail">purple floral duvet cover</div>
+	    		    		<div class="entryDetail">http://www.potterybarn.com/shop/</div>
+	    		    		<div class="entryDetail">for Gigi’s room</div>
+	    		    		<div class="entryDetail">$150.00</div>
+	    		    	</div>
+	    		    </div>
+	    		    <div id='fullListScreen'>
+	    		    	<div class="listName">list: for the home</div>
+	    		    	<div class="listItemA">floral duvet cover</div>
+	    		    	<div class="listItemB">abstract blue painting</div>
+	    		    	<div class="listItemA">espresso cups and saucers</div>
+	    		    	<div class="listItemB">red canisters</div>
+	    		    	<div class="listItemA">lilac candles</div>
+	    		    	<div class="listItemB">euro sham pillow covers</div>
+	    		    	<div class="listItemA">kitchen towels</div>
+	    		    	<div class="listItemB">red canisters</div>
+	    		    	<div class="listItemA">floral duvet cover</div>
+	    		    	<div class="listItemB">espresso cups and saucers</div>
+	    		    	<div class="listItemA">red canisters</div>
+	    		    	<div class="listItemB">red canisters</div>
+	    		    	<div class="listItemA">floral duvet cover</div>
+	    		    	<div class="listItemB">espresso cups and saucers</div>
+	    		    </div>
+	    		    <div id='myListsScreen'>
+	    		    	<div class="listName">my lists</div>
+		    		    <div class="MyListitems">
+		    		    	<div class="MyList"><div class="MyListName">apparel</div></div>
+		    		    	<div class="MyList"><div class="MyListName">for the pet</div></div>
+		    		    	<div class="MyList"><div class="MyListName">for the home</div></div>
+		    		    	<div class="MyList"><div class="MyListName">games</div></div>
+		    		    	<div class="MyList"><div class="MyListName">shoes</div></div>
+		    		    	<div class="MyList"><div class="MyListName">for the baby</div></div>
+		    		    </div>
+	    		    </div>
+	    		      <div id='detailItemsScreen'>
+	    		    	<div class="listName">list: for the home</div>
+		    		    	<div class="detailItemName">purple floral duvet cover</div>
+		    		    <div class="detailChoices">
+		    		    	<div class="detail">http://www.potterybarn.com/shop/</div>
+		    		    	<div class="detail">for Gigi’s room</div>
+		    		    	<div class="detail">$150.00</div>
+		    		    </div>
+	    		    </div>
+	    		</section>
+
+	    		<section class="bottomArea">
+	    			<div id='homeButtons'>
+		    			<div id="viewButton"><div class='clickTrack'><div class='clickText'>view your lists</div></div></div>
+		    			<div id="startButton"><div class='clickTrack'><div class='clickText'>start your wishlist</div></div></div>
+		    		</div>
+		    		<div id='conversionButtons'>
+
+		    			<div id="viewButton"><div class='clickTrack'><div class='clickText'>buy item</div></div></div>
+		    			<div id="startButton"><div class='clickTrack'><div class='clickText'>edit item</div></div></div>
+		    		</div>
+	    			<div id="largePlusbutton">
+	    				<div class="button">
+	    					<div class="plus">
+   								<div class="horizontal"></div>
+    							<div class="vertical"></div>
+  							</div>
+	    				</div>
+	    			</div>
+	    		</section>
+
+    		</main>
+
+    	</div>
+    </div>
+  </body>
+</html>

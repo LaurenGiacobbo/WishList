@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <title>My WishList App:HOME</title>
+  <link rel="stylesheet" href="../assets/wishStyles.css">    
+  </head>
+
+  <body ng-controller="WelcomeCtrl">
+    <div id="myWishList">
+      <div class="tint">
+          <main>
+            <section class="topArea">
+            </section>
+            <section class="middleArea"> 
+            <div id='myMenuBar' class='loggedInName'>{{listName}}<br><a href="#/home.html" ng-click="logMeOut();">Logout</a>
+              <div id='myMenu' ng-click="showMenu()"></div>
+              <div id='myMenuClose' ng-click="closeMenu()"></div>
+            </div>               
+             
+             <div id='myListsScreen'>
+                <div class="listName">my lists</div>
+                <div class="list-group" ng-init='getLists(email.$id)'ng-repeat="email in emails" >          
+                  <div class='loggedInEmail'>{{email.$id}}</div>
+                </div>
+                <div class="MyListitems">
+                  <div class="MyList"ng-repeat="list in lists" ng-click=grabList(list.$value)>
+                    <div class="MyListName">{{list.$value}}</div>
+                  </div>
+                </div>
+              </div>
+              </div>
+            </section>
+            <section class="bottomArea"></section>
+            <div id="slideOutMenu">  
+              <ul>
+                <li ng-click="showMyLists()">View my lists</li>
+                <li ng-click="gotSelectCat()">Create new list</li>
+                <li>Share your list</li>
+              </ul>            
+            </div>
+          </main>
+        </div>
+      </div>
+  </body>
+
+</html>

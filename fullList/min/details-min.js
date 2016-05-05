@@ -1,0 +1,1 @@
+"use strict";angular.module("myWishListApp.details",["ngRoute","firebase"]).config(["$routeProvider",function(e){e.when("/details",{templateUrl:"details/details.html",controller:"detailCtrl"})}]).controller("detailCtrl",["$scope","$location",function(e,t,l){console.log("detailsScreen"),e.current_Selection=e.cat0}]);

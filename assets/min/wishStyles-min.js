@@ -1,0 +1,1 @@
+"use strict";var listCreated,whichList;angular.module("myWishListApp",["ngRoute","myWishListApp.home","myWishListApp.selectCat","myWishListApp.fullList","myWishListApp.register","myWishListApp.welcome"]).config(["$routeProvider",function(i){i.otherwise({redirectTo:"/home"})}]);

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <title>My WishList App:SELECTCATEGORY</title>
+  <link rel="stylesheet" href="../assets/wishStyles.css">    
+  </head>
+
+  <body ng-controller="selectCatCtrl">
+    <div id="myWishList">
+      <div class="tint">
+          <main>
+            <section class="topArea">
+
+            </section>
+            <section class="middleArea">
+            <div id='myMenuBar' class='loggedInName'>{{listName}}<br><a href="#/home.html" ng-click="logMeOut();">Logout</a>
+                <div id='myMenu' ng-click="showMenu()"></div>
+                <div id='myMenuClose' ng-click="closeMenu()"></div>
+              </div>               
+                <div id="addCat">Select your wish list category</div>
+                <div id='categoryChoicesScreen'>
+                  <div class="cat" ng-click="mySelection(0)" ng-model="myPosts.category">{{cat0}}</div>
+                  <div class="cat" ng-click="mySelection(1)" ng-model="myPosts.category">{{cat1}}</div>
+                  <div class="cat" ng-click="mySelection(2)" ng-model="myPosts.category">{{cat2}}</div>
+                  <div class="cat" ng-click="mySelection(3)" ng-model="myPosts.category">{{cat3}}</div>       
+                  <div class="cat" ng-click="mySelection(4)" ng-model="myPosts.category">{{cat4}}</div>
+                  <div class="cat" ng-click="mySelection(5)" ng-model="myPosts.category">{{cat5}}</div>
+                  <div class="cat" ng-click="mySelection(6)" ng-model="myPosts.category">{{cat6}}</div>
+                  <div class="cat" ng-click="mySelection(7)" ng-model="myPosts.category">{{cat7}}</div>
+                  <div id="largePlusbuttonCatSelection" ng-repeat="email in emails">
+                    <div class="button" ng-click="AddCategory(current_Selection, email.$id)" ng-disabled="button_clicked">
+                      <div class="plus">
+                        <div class="horizontal"></div>
+                        <div class="vertical"></div>
+                      </div>
+                    </div>
+                    <div class="itemCat">{{email.$id}}</div>
+                  </div>
+                </div>
+              <div id='addItemsScreen'>
+                <div ng-model='current_Selection'></div>
+                <div id="addCat">{{category}}</div>
+                <div class="addItem">add your item</div>
+                <div id='entryArea'>
+                  <textarea placeholder="details" class="entryDetail" id="txtDetail" ng-model="myPosts.details" name="txtDetail" ></textarea>
+                  <textarea placeholder="link" class="entryDetail" id="txtLink" ng-model="myPosts.link" name="txtPost" ></textarea>
+                  <textarea placeholder="notes" class="entryDetail" id="txtNote" ng-model="myPosts.note" name="txtPost" ></textarea>
+                  <textarea placeholder="price" class="entryDetail" id="txtPrice" ng-model="myPosts.price" name="txtPost" ></textarea>
+                </div>
+                  <div id="largePlusbuttonAddItem" ng-click="AddPost(current_Selection, email.$id)" ng-disabled="button_clicked">
+                    <div class="button">
+                      <div class="plus">
+                        <div class="horizontal"></div>
+                        <div class="vertical"></div>
+                      </div>
+                    </div>
+                    <div class="itemCat">{{email.$id}}</div>
+                </div>                
+            </section>
+            <section class="bottomArea">
+            </section>
+             <div id="slideOutMenu">  
+              <ul>
+                <li ng-click="showMyLists()">View my lists</li>
+                <li ng-click="gotSelectCat()">Create new list</li>
+                <li>Share your list</li>
+              </ul>            
+            </div>
+          </main>
+        </div>
+      </div>
+  </body>
+
+</html>

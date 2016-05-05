@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <title>My WishList App:MYFULLLIST</title>
+  <link rel="stylesheet" href="../assets/wishStyles.css">    
+  </head>
+
+  <body ng-controller="fullListCtrl">
+    <div id="myWishList">
+      <div class="tint">
+          <main>
+            <section class="topArea">
+              <div id="ScreenText">
+                <div id="textTitle">Select your wish list category</div>
+              </div>
+            </section>
+            <section class="middleArea">
+            <div id='myMenuBar' class='loggedInName'>{{listName}}<br><a href="#/home.html" ng-click="logMeOut();">Logout</a>
+                <div id='myMenu' ng-click="showMenu()"></div>
+                <div id='myMenuClose' ng-click="closeMenu()"></div>
+              </div>      
+              <div id='fullListScreen'>
+                <div class="listItemB">{{category}}</div> 
+                <div class="listItemA" ng-repeat="article in articles">
+                  <div class="item" ng-click="showArticle(article.$id, article.details,category)">{{article.details}}</div>
+                  <div class="btn-warning" ng-click="removeArticle(article.$id)">Delete</div>
+                  <div class="btn-warningB"> > </div>
+                </div>
+                <div class="addItem">                  
+                  <div ng-click="newItem()">Add Item +</div>
+                </div>
+              </div>
+              <div id='detailItemsScreen'>
+                  <div class="detailBack" ng-click="backToList()">< back to list</div>
+                  <div class="detailTitle">{{data.details}}</div>
+                  <div class="detail"><div class="detailText">{{data.link}}</div></div>
+                  <div class="detail"><div class="detailText">{{data.note}}</div></div>
+                  <div class="detail"><div class="detailText">{{data.price}}</div></div>
+              </div>
+              <!--<div class="modal fade" id="editModal" tabindex="-1" role="dialog" aria-labelledby="editModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                      <h4 class="modal-title" id="editModalLabel">Update Post</h4>
+                    </div>
+                    <div class="modal-body">
+                      <form role="form">
+                        <div class="form-group">
+                          <input id="txtDetail" class="entryDetail" name="txtDetail" ng-model="article.details" type="text" placeholder="details" class="form-control input-md">
+                          <textarea placeholder="link" class="entryDetail" id="txtLink" ng-model="article.link" name="txtPost" ></textarea>
+                          <textarea placeholder="notes" class="entryDetail" id="txtNote" ng-model="article.note" name="txtPost" ></textarea>
+                          <textarea placeholder="price" class="entryDetail" id="txtPrice" ng-model="article.price" name="txtPost" ></textarea>
+                        </div>
+                      </form>
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                      <button type="button" class="btn btn-primary" ng-click="update()">Publish</button>
+                    </div>
+                  </div>
+                </div>
+              </div>-->
+            </section>
+            <section class="bottomArea"></section>
+             <div id="slideOutMenu">  
+              <ul>
+                <li ng-click="showMyLists()">View my lists</li>
+                <li ng-click="gotSelectCat()">Create new list</li>
+                <li>Share your list</li>
+              </ul>            
+            </div>
+          </main>
+        </div>
+      </div>
+  </body>
+
+</html>
